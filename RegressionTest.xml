@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="HireProUsAPIRegressionSuite">
+<listeners>
+<listener class-name="com.Hireprous.Engine.listeners.RetryListener"/>
+<listener class-name="com.Hireprous.Engine.listeners.TestNGEmailableReport2" />
+</listeners>
+<parameter name="environment" value="TEST"/>
+	<test name="HireProUsAPITest" preserve-order="true">
+		<classes>
+			<class name="com.Hireprous.testcases.TC_01_LoginTest" />
+            <class name="com.Hireprous.testcases.TC_02_CreateProjectTest" />
+			<class name="com.Hireprous.testcases.TC_03_GetAllProjectTest" />
+            <class name="com.Hireprous.testcases.TC_04_CreateJobRequestTest" />
+            <class name="com.Hireprous.testcases.TC_05_CreateBUTest" />
+            <class name="com.Hireprous.testcases.TC_06_GetBUTest" />
+            <class name="com.Hireprous.testcases.TC_07_CreateVendorTest" />
+            <class name="com.Hireprous.testcases.TC_08_DeleteProjectTestById" />
+        </classes>
+	</test>
+	</suite>
